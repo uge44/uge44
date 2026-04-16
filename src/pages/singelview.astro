@@ -1,0 +1,22 @@
+---
+const id = Astro.url.searchParams.get("id");
+
+const response = await fetch(`https://dyzjrnptzqhbvdfhvkgi.supabase.co/rest/v1/uge44_kalender?id=eq.${id}`, {
+  headers: {
+    apikey: "DIN_KEY",
+  },
+});
+
+const data = await response.json();
+const person = data[0];
+---
+
+<h1>{person?.name}</h1>
+
+<p>{person?.description}</p>
+<p>{person?.time}</p>
+<p>{person?.date}</p>
+
+<img src={person?.img} alt={person?.name} />
+
+<button onclick="history.back()">Tilbage</button>

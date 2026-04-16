@@ -1,16 +1,39 @@
 ---
 import Card from "./Card.astro";
 
-const options = {
+const response = await fetch("https://dyzjrnptzqhbvdfhvkgi.supabase.co/rest/v1/uge44_kalender", {
   headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3b2l1eWxwemJpYmN0YWRydWptIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYyOTE2OTYsImV4cCI6MjA5MTg2NzY5Nn0.pFQURsfc_tYEDlo-mciU5nAUE-UTSyX5VSG55I1Hkjc",
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5empybnB0enFoYnZkZmh2a2dpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYzMDIwNzIsImV4cCI6MjA5MTg3ODA3Mn0.IkDrrKsAta2fGFEBNrpd2dK1SW3IJmgHoK8PPQsDjXo",
   },
-};
-const url = "https://awoiuylpzbibctadrujm.supabase.co/rest/v1/træne_supa";
-const response = await fetch(url, options);
+});
+
 const data = await response.json();
+
+// const options = {
+//   headers: {
+//     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5empybnB0enFoYnZkZmh2a2dpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYzMDIwNzIsImV4cCI6MjA5MTg3ODA3Mn0.IkDrrKsAta2fGFEBNrpd2dK1SW3IJmgHoK8PPQsDjXo",
+//   },
+// };
+// const url = "https://dyzjrnptzqhbvdfhvkgi.supabase.co/rest/v1/uge44_kalender";
+// const response = await fetch(url, options);
+// const data = await response.json();
+// ---
+
+// <h2>Cardcontainer</h2>
+// <p>{data[0].name}</p>
+// {data.map((person: any) => <Card personData={person} />)}
 ---
 
 <h2>Cardcontainer</h2>
-<p>{data[0].name}</p>
-{data.map((person) => <Card personData={person} />)}
+<div class="grid_1-1-1">
+  {data.map((person: any) => <Card personData={person} />)}
+</div>
+
+<style>
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+</style>

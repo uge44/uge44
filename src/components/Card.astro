@@ -2,7 +2,36 @@
 const { personData } = Astro.props;
 ---
 
-<h2>Card</h2>
-<p>{personData.name}</p>
-<p>{personData.age}</p>
-<p>{personData.occupation}</p>
+<article class="card">
+  <div class="grid_1-1-1">
+    <div>
+      <a href={`/person?id=${personData.id}`}>
+        <h2>{personData.name}</h2>
+      </a>
+
+      <p>{personData.time}</p>
+      <p>{personData.end_time}</p>
+      <p>{personData.date}</p>
+      <p>{personData.end_date}</p>
+      <p>{personData.city}</p>
+      <p>{personData.adresse}</p>
+      <p>{personData.pris}</p>
+      <img src={personData.img} alt="{personData.name}" />
+      <p>{personData.end_date}</p>
+    </div>
+  </div>
+</article>
+
+<style>
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+  img {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+  }
+</style>
