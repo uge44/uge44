@@ -1,13 +1,68 @@
 ---
-
+const { pathname } = Astro.url;
+const navLinks = [
+  {
+    img: "/img/logo.svg",
+    alt: "Logo",
+    path: "/",
+  },
+  {
+    title: "Tilmeld",
+    path: "/tilmeld",
+  },
+  {
+    title: "Events",
+    path: "/events",
+  },
+];
 ---
 
 <header>
+  <!-- <h1>{Astro.url.pathname}</h1> -->
   <nav>
     <ul>
-      <li><a href="/">Logo</a></li>
-      <li><a href="/about">Tilmeld</a></li>
-      <li><a href="/contact">Events</a></li>
+      {
+        navLinks.map((link) => {
+          return (
+            <li>
+              <a href={link.path} class={pathname === link.path && "active"}>
+                {link.img ? <img src={link.img} alt={link.alt} /> : link.title}
+              </a>
+            </li>
+          );
+        })
+      }
     </ul>
   </nav>
 </header>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--background-color);
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin-left: 1.5rem;
+  }
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  a.active {
+    color: hotpink;
+  }
+</style>
