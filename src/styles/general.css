@@ -14,4 +14,7 @@ main {
 }
 body {
   background-color: var(--sand);
+* {
+  text-decoration: none;
+  list-style-type: none;
 }
