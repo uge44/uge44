@@ -6,31 +6,53 @@
   --yellow: #f9f2e9;
   --black: black;
   --white: white;
-  --sand: #fef8f6;
+  --bg-color: #fef8f6;
+  --orange: #df742d;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-header {
-  background-color: var(--sand);
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-h1,
-h2,
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 400;
+}
 h3,
 h4 {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+  font-style: bold;
 }
 h5 {
-  font-family: "Open Sans bold";
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-style: bold;
 }
 
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 800;
+  font-weight: 400;
   font-style: normal;
 }
+p {
+  font-family: "Montserrat", sans-serif;
+}
 
+header {
+  background-color: var(--sand);
+}
 footer {
   background-color: var(--mellem-laks);
 }
