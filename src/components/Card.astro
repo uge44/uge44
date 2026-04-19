@@ -1,19 +1,19 @@
 ---
 const { personData } = Astro.props;
+const { slug } = Astro.params;
 ---
 
 <article class="card">
-  <a href={`/person?id=${personData.id}`}>
+  <a href={`/events/${personData.slug}`}>
     <h5>{personData.name}</h5>
     <p>{personData.short_description}</p>
     <h5>Læs mere →</h5>
-
-    <h4>
-      {personData.date}
-      {personData.end_date}
-    </h4>
-    <img src={personData.img} alt={personData.name} />
   </a>
+  <h4>
+    {personData.date}
+    {personData.end_date}
+  </h4>
+  <img src={personData.img} alt={personData.name} />
 </article>
 
 <style>
@@ -29,24 +29,23 @@ const { personData } = Astro.props;
     color: var(--text-color);
     text-decoration: none;
   }
+
   .card {
     background-color: var(--lys-laks);
     padding: 2rem;
     margin: 1rem;
     display: grid;
     grid-template-rows: subgrid;
-    grid-row: span 6;
+    grid-row: span 3;
     gap: 0;
   }
-  .card a {
-    display: contents;
-  }
+
   h4 {
     text-align: right;
     padding: 1rem 1.1rem 0rem 1rem;
   }
   p {
-    padding: 0rem 1rem 0rem 1rem;
+    padding: 0.5rem 1rem 0rem 1rem;
   }
   h5 {
     padding: 0rem 1rem 0rem 1rem;

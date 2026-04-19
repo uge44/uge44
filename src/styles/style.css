@@ -18,13 +18,16 @@
   font-weight: 400;
   font-style: normal;
 }
-h1 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
+
 h2 {
   font-family: "Open Sans", sans-serif;
-  font-size: 85px;
+  font-size: 70px;
   font-style: normal;
   font-weight: 400;
   margin: 0 4.8rem;
@@ -46,12 +49,6 @@ h5 {
   font-style: bold;
 }
 
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
 p {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
