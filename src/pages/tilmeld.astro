@@ -1,7 +1,28 @@
 ---
+import TilmeldCard from "../components/TilmeldCard.astro";
+import TilmeldPlakat from "../components/TilmeldPlakat.astro";
 import PageLayout from "../Layouts/PageLayout.astro";
 import "../styles/general.css";
 import "../styles/style.css";
+import livogdoedplakat from "./img/livogdoedplakat.png";
+import Simonvaeth from "./img/SimonVaeth.png";
 ---
 
 <PageLayout heading="Tilmeld" />
+
+<TilmeldCard />
+
+<TilmeldPlakat
+  plakat={livogdoedplakat}
+  title="I 2025 blev plakaten for UGE 44 skabt af illustrator, animator og billedkunstner Simon Væth."
+  caption="Om at lave plakaten forklarer Simon: "
+  text="Jeg takkede ja til at arbejde med plakat-designet, da jeg finder opgaven både spændende og udfordrende. Det er jo et følsomt emne, og for mig at se bliver kunsten at ramme noget som hverken er for ”indpakket” og distanceret til temaet, og på den anden side heller ikke for direkte og hårdt. Døden skal kort sagt hverken blive for visuelt utydelig eller modsat for tydelig! Jeg håber at kunne ramme et subtilt poetisk eller metaforisk sprog som finder en visuel balance sammen med et mere grafisk visuelt sprog."
+/>
+<TilmeldPlakat
+  plakat={Simonvaeth}
+  order="-1"
+  title="Om Simon"
+  text=" I sit virke som illustrator arbejder Simon med et grafisk billedsprog hvor han tolker og fordrejer tekster og temaer til poetiske illustrationer. I hans alsidige arbejde finder man ofte små ledetråde
+til hans personlige engagement i de historiske og mytologiske temaer som i forening med de grove analoge teknikker og de klare digitale farver, skaber et udtryk som både peger frem og tilbage i tid. Med papirklippet og de grafiske trykteknikker, eksperimenterer
+han med det flade, naivistiske og umiddelbare formsprog. Simon har illustreret flere børne- og billedbøger samt tegnet for en lang række aviser, blade og forlag."
+/>
