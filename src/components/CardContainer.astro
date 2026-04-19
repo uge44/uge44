@@ -10,8 +10,17 @@ const { events } = Astro.props;
 <style>
   .grid_1-1-1 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1rem;
+    margin: 4rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    row-gap: 1rem;
   }
 </style>
