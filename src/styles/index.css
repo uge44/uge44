@@ -295,15 +295,17 @@ main {
 }
 
 .taboo__grid {
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   align-items: start;
+  flex-direction: column;
 }
 
 .taboo__content h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 24px;
+  text-align: center;
 }
 
 .taboo__list {
@@ -334,60 +336,26 @@ main {
 }
 
 @media (max-width: 768px) {
-  .taboo {
-    padding: 48px 0;
-  }
-
-  .taboo__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    align-items: start;
-  }
-
   .taboo__content {
-    width: 100%;
-    max-width: none;
+    text-align: left;
   }
 
   .taboo__content h2 {
-    font-size: 1.4rem;
-    white-space: nowrap;
+    text-align: left !important;
+    margin: 0 0 16px 0 !important;
+    max-width: none !important;
+    width: auto !important;
+  }
 
-    .taboo__list {
-      margin: 0 0 24px;
-      padding-left: 18px;
-    }
+  .taboo__content h3 {
+    text-align: left !important;
+    margin: 24px 0 12px 0 !important;
+    max-width: none !important;
+    width: auto !important;
+  }
 
-    .taboo__list li {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 10px;
-      max-width: none;
-    }
-
-    .taboo__content h3 {
-      font-size: 1.6rem;
-      line-height: 1.2;
-      margin: 0 0 14px;
-    }
-
-    .taboo__content p {
-      font-size: 1rem;
-      line-height: 1.7;
-      margin: 0 0 14px;
-      max-width: none;
-    }
-
-    .taboo__image {
-      width: 100%;
-    }
-
-    .taboo__image img {
-      width: 100%;
-      max-width: 280px;
-      display: block;
-      margin: 0 auto;
-    }
+  .taboo__content p,
+  .taboo__content li {
+    text-align: left;
   }
 }
