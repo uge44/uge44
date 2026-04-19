@@ -8,19 +8,21 @@ const { events } = Astro.props;
 </div>
 
 <style>
-  .grid_1-1-1 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 425px);
-    gap: 1rem;
-    margin: 4rem;
+  @media (max-width: 900px) {
+    .grid_1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 1rem 10rem;
+      padding: 1rem;
+    }
   }
 
-  main {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    row-gap: 1rem;
+  @media (min-width: 900px) {
+    .grid_1-1-1 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(425px, 425px));
+      gap: 1rem;
+      margin: 4rem;
+    }
   }
 </style>

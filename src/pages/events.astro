@@ -4,6 +4,7 @@ import CardContainer from "../components/CardContainer.astro";
 
 import "../styles/general.css";
 import "../styles/style.css";
+
 const response = await fetch("https://dyzjrnptzqhbvdfhvkgi.supabase.co/rest/v1/uge44_kalender", {
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5empybnB0enFoYnZkZmh2a2dpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYzMDIwNzIsImV4cCI6MjA5MTg3ODA3Mn0.IkDrrKsAta2fGFEBNrpd2dK1SW3IJmgHoK8PPQsDjXo",
@@ -11,13 +12,11 @@ const response = await fetch("https://dyzjrnptzqhbvdfhvkgi.supabase.co/rest/v1/u
 });
 
 const events = await response.json();
+
 const groupedByCity = events.reduce((acc, event) => {
   const city = event.city ?? "Ukendt";
 
-  if (!acc[city]) {
-    acc[city] = [];
-  }
-
+  if (!acc[city]) acc[city] = [];
   acc[city].push(event);
 
   return acc;
@@ -25,13 +24,78 @@ const groupedByCity = events.reduce((acc, event) => {
 ---
 
 <PageLayout heading="Events" />
+<nav data-filter-nav>
+  <button class="dropDown">Steder ﹀ </button>
+  <ul class="filter-buttons">
+    <li class="city" data-city="København">København</li>
+    <li class="city" data-city="Aarhus">Aarhus</li>
+    <li class="city" data-city="Odense">Odense</li>
+    <li class="city" data-city="Ebeltoft">Ebeltoft</li>
+    <li class="city" data-city="Roskilde">Roskilde</li>
+    <li class="city" data-city="Silkeborg">Silkeborg</li>
+    <li class="city" data-city="Ringe">Ringe</li>
+    <li class="city" data-city="Køge">Køge</li>
+    <li class="city" data-city="Lundby">Lundby</li>
+    <li class="city" data-city="Randers">Randers</li>
+  </ul>
+</nav>
 
 {
-  Object.entries(groupedByCity).map(([city, events]) => (
-    <section>
-      <h2>{city}</h2>
+  Object.entries(groupedByCity).map(([city, cityEvents]) => (
+    <section class="city-section" data-city-section={city}>
+      <div class="by">
+        <div class="line top" />
+        <h2>{city}</h2>
+        <div class="line bottom" />
+      </div>
 
-      <CardContainer events={events} />
+      <CardContainer events={cityEvents} />
     </section>
   ))
 }
+
+<script>
+  function url_param(key, value) {
+    const url = new URL(window.location);
+    url.searchParams.set(key, value);
+    window.history.pushState({}, "", url);
+  }
+
+  function url_param_get(key) {
+    const url = new URL(window.location);
+    return url.searchParams.get(key);
+  }
+
+  const buttons = document.querySelectorAll(".city");
+  const sections = document.querySelectorAll(".city-section");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const city = btn.dataset.city;
+
+      url_param("city", city);
+
+      sections.forEach((section) => {
+        if (section.dataset.citySection === city) {
+          section.style.display = "block";
+        } else {
+          section.style.display = "none";
+        }
+      });
+    });
+  });
+
+  const activeCity = url_param_get("city");
+
+  if (activeCity) {
+    sections.forEach((section) => {
+      section.style.display = section.dataset.citySection === activeCity ? "block" : "none";
+    });
+  }
+  const dropDown = document.querySelector(".dropDown");
+  const nav = document.querySelector("[data-filter-nav]");
+
+  dropDown.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
