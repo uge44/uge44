@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+const { title, text, plakat, caption } = Astro.props;
+---
+
+<section class="grid_plakat">
+  <Image src={plakat} alt="plakat" class="plakat" />
+  <div class="content">
+    <h3>{title}</h3>
+    <h5>{caption}</h5>
+    <p>{text}</p>
+  </div>
+</section>
+
+<style>
+  @media screen and (width>800px) {
+    .grid_plakat {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .plakat {
+    max-width: fit-content;
+    place-self: center;
+  }
+  .content {
+    place-content: center;
+    text-align: left;
+    padding: 3em;
+  }
+</style>
