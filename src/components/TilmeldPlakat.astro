@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-const { title, text, plakat, caption } = Astro.props;
+const { title, text, plakat, caption, order } = Astro.props;
 ---
 
 <section class="grid_plakat">
@@ -18,13 +18,17 @@ const { title, text, plakat, caption } = Astro.props;
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+    .content {
+      order: var(--order);
+    }
   }
   .plakat {
-    max-width: fit-content;
+    max-height: 500px;
+    padding: 3em;
     place-self: center;
   }
   .content {
-    place-content: center;
+    place-content: center top;
     text-align: left;
     padding: 3em;
   }
