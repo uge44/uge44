@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import logo from "./img/logo.svg";
+---
+
 <section class="grid_2-1_tilmeld">
   <div>
     <h1>Vil du være med til at sætte fokus på døden i uge 44?</h1>
@@ -12,6 +17,14 @@
   </div>
   <div>
     <h5>Download logoer og andet materiale til kampagneugen UGE 44 - Fokus på døden.</h5>
+    <div class="button_grid">
+      <button class="btn_download"> <Image src={logo} alt="plakat" class="logopic" /> Download</button>
+      <button class="btn_download"> <Image src={logo} alt="plakat" class="logopic" />Download</button>
+      <button class="btn_download"><Image src={logo} alt="plakat" class="logopic" />Download</button>
+      <button class="btn_download"><Image src={logo} alt="plakat" class="logopic" />Download</button>
+      <button class="btn_download"><Image src={logo} alt="plakat" class="logopic" />Download</button>
+      <button class="btn_download"><Image src={logo} alt="plakat" class="logopic" />Download</button>
+    </div>
   </div>
 </section>
 
@@ -20,17 +33,34 @@
     .grid_2-1_tilmeld {
       display: grid;
       grid-template-columns: 2fr 1fr;
+      margin: 0.3em;
     }
   }
+
   button {
     background-color: var(--bg-color);
     color: var(--black);
     padding: 1em;
     border-radius: 15px;
   }
+  .button_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .btn_download {
+    padding: 0.4em;
+    width: 180px;
+    background-color: var(--laks);
+    display: flex;
+    place-items: center;
+    justify-content: space-evenly;
+  }
   div {
     background-color: var(--laks);
     margin: 2em 4em;
     padding: 1em;
+  }
+  .logopic {
+    max-width: 80px;
   }
 </style>
