@@ -2,6 +2,197 @@
 import PageLayout from "../Layouts/PageLayout.astro";
 import "../styles/general.css";
 import "../styles/style.css";
+import "../styles/index.css";
+///@ts-nocheck
 ---
 
 <PageLayout heading="Index" />
+<!-- hero -->
+<main>
+  <section class="hero">
+    <img src="/img/hero.png" alt="Fokus på døden" class="hero__image" />
+  </section>
+  <!-- om uge 44 -->
+  <section class="about">
+    <div class="container about__grid">
+      <div class="about__text">
+        <h2>Hvad er Uge 44?</h2>
+        <p>I forskellige dele af verden mindes man de døde i efteråret. De fleste kender nok De Dødes Dag i Mexico, hvor man mødes på tværs af generationer og ærer og mindes sine afdøde.</p>
+        <h3>Men hvornår forholder vi os egentlig til de døde i Danmark?</h3>
+        <p>
+          I vores del af verden – og i vores tid – bruger vi ikke meget tid på at forholde os til døden eller de døde. I nogle kirker er der en tradition for at læse navnene op på de døde ved allehelgensdag, men derudover har vi ikke mange
+          fællesskaber forbundet med at mindes de døde på særlige dage. Det resulterer i, at døden, sorgen og minderne bliver til private anliggender, som man i bedste fald har sammen med familien, og i værste fald slet ikke har overhovedet.
+        </p>
+
+        <h3>I gamle dage var døden en del af livet</h3>
+        <p>
+          Engang var døden i Danmark en integreret del af livet, som et billede på dets ophør og som en mulig indgang til noget andet og evigt. Livet blev ikke taget for givet, for døden var altid lige om hjørnet. I dag kan vi være taknemmelige for,
+          at døden ikke altid ligger på lur. Men de fleste af os kommer en dag til at skulle forholde sig til døden, om vi vil det eller ej. Derfor vil vi gerne slå et slag for, at vi kan skabe nogle fælles rammer hvor vi kan forholde os til døden i
+          livet, så vi sammen kan få et sprog for det svære, det meningsfulde og det menneskelige. Men vi ved, at det kan være svært. Især når rammerne mangler.
+        </p>
+      </div>
+
+      <div class="about__image">
+        <img src="/img/streg.png" alt="Timeglas" />
+      </div>
+    </div>
+  </section>
+  <!-- events -->
+  <section class="events">
+    <div class="container">
+      <div class="events__header">
+        <img src="/img/timeglas.png" alt="Timeglas" />
+        <h2>Events i uge 44</h2>
+        <img src="/img/timeglas.png" alt="Timeglas" />
+      </div>
+
+      <div class="event-grid">
+        <article class="event-card">
+          <a href="/events" class="event-card__link">
+            <img src="/img/dame.png" alt="Event 1" />
+            <div class="event-card__body">
+              <p class="event-date">30.10.2026</p>
+              <h5>Allehelgenskoncert med silkelang</h5>
+            </div>
+          </a>
+        </article>
+
+        <article class="event-card">
+          <a href="/events" class="event-card__link">
+            <img src="/img/hænder.png" alt="Event 2" />
+            <div class="event-card__body">
+              <p class="event-date">31.10.2026</p>
+              <h5>Samtale om sorg</h5>
+            </div>
+          </a>
+        </article>
+
+        <article class="event-card">
+          <a href="/events" class="event-card__link">
+            <img src="/img/noidea.png" alt="Event 3" />
+            <div class="event-card__body">
+              <p class="event-date">01.11.2026</p>
+              <h5>Koncert og fællesskab</h5>
+            </div>
+          </a>
+        </article>
+
+        <article class="event-card">
+          <a href="/events" class="event-card__link">
+            <img src="/img/natur.png" alt="Event 4" />
+            <div class="event-card__body">
+              <p class="event-date">02.11.2026</p>
+              <h5>Mindegudstjeneste</h5>
+            </div>
+          </a>
+        </article>
+
+        <article class="event-card">
+          <a href="/events" class="event-card__link">
+            <img src="/img/form.png" alt="Event 5" />
+            <div class="event-card__body">
+              <p class="event-date">28.12.2026</p>
+              <h5>Temaeftermiddag</h5>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- fokus på døden -->
+  <section class="focus">
+    <div class="container focus__grid">
+      <div class="focus__content">
+        <h2>Fokus på døden</h2>
+        <h3>Er det vigtigt at tale om døden?</h3>
+
+        <p>Undersøgelsens tredje spørgsmål handlede om, hvorvidt respondenterne fandt, at “det er vigtigt at tale om døden – både ens egen og andres død – med ens familie og omgangskreds”.</p>
+
+        <p>
+          I forhold til aldersdimensionen ses det, at selv om mere end 3/4 i alle aldersgrupper mener, at det er vigtigt at tale om døden med ens nærmeste, så er der forholdsvis flere blandt de yngre aldersgrupper (18–54 år), der mener, at det ikke
+          er vigtigt.
+        </p>
+      </div>
+      <div class="focus__image">
+        <img src="/img/ur.png" alt="Graf om fokus på døden" />
+      </div>
+    </div>
+  </section>
+
+  <!-- kampagner -->
+  <section class="campaigns">
+    <div class="container">
+      <h2 class="campaigns__title">Tidligere kampagner</h2>
+
+      <div class="campaigns__grid">
+        <article class="campaign-card">
+          <h3>UGE 44 i 2024</h3>
+
+          <div class="campaign-card__top">
+            <img src="/img/dod.png" alt="Uge 44 i 2024" />
+
+            <div class="campaign-card__intro">
+              <p>
+                2024 bar præg af, at flere sluttede sig til vores kampagne. Vi gjorde derfor danskere opmærksomme på en masse initiativer landet rundt – både nogle, der i forvejen var planlagt og andre, der opstod på baggrund af vores kampagneuge. I
+                2024 lancerede vi også vores podcastserie “Når døden os skiller” d. 28. oktober, hvilket blev startskuddet til UGE 44 – Fokus på døden. Derudover valgte vi for første gang at afholde overrækkelsen af vores Liv&Død Prisen i løbet af
+                uge 44, hvilken gik til skuespiller Esben Dalgaard. Vi udviklede igen en pakke til biblioteker og kulturhuse der inkluderede boglister, plakat og grafik til infoskærme, så de på den måde kunne vise udadtil, at de havde døden i fokus.
+              </p>
+
+              <a href="/kampagner/2024" class="campaign-card__button">Læs mere</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="campaign-card">
+          <h3>UGE 44 i 2025</h3>
+
+          <div class="campaign-card__top">
+            <img src="/img/kvinder.png" alt="Uge 44 i 2025" />
+
+            <div class="campaign-card__intro">
+              <p>
+                2025 sluttede endnu flere sig til vores kampagne, og vi gjorde vores følgere opmærksomme på en masse initiativer landet rundt i vores nye kalender for UGE 44. I 2025 afholdt vi Liv&Død Pris overrækkelse som optakt til kampagnen, og
+                åbnede udstillingen ANDRE MENNESKER TALER på DOKK1 i Aarhus. Derudover fik vi produceret en helt særlig plakat, skabt af Simon Væth, til at symbolisere ugens tematikker.  Vi udviklede igen inspirationspakke til alle interesserede samt
+                til biblioteker og kulturhuse, der inkluderede boglister, filmliste, plakat og grafik til infoskærme, så de på den måde kunne vise udadtil, at de havde døden i fokus.
+              </p>
+
+              <a href="/kampagner/2025" class="campaign-card__button">Læs mere</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABU -->
+  <section class="taboo">
+    <div class="container taboo__grid">
+      <div class="taboo__content">
+        <h2>At tale om døden er tabu</h2>
+
+        <ul class="taboo__list">
+          <li>3% af danskerne synes at det er forbudt at tale om døden.</li>
+          <li>27% af danskerne synes at det er svært at tale om døden.</li>
+          <li>24% af danskerne synes at døden er ubehageligt at beskæftige sig med.</li>
+          <li>19% af danskerne er bange for døden.</li>
+          <li>14% af danskerne gemmer døden væk.</li>
+          <li>9% af danskerne har glemt hvordan man taler om døden.</li>
+          <li>4% af danskerne synes at døden ikke giver mening for dem.</li>
+        </ul>
+
+        <h3>Hvordan kan man blive en god ven?</h3>
+
+        <p>Det er ikke kun den døende, det gavner at have talt om døden og den sidste tid inden. Det kan også være en hjælp, når du er pårørende og skal leve videre efter at have mistet.</p>
+
+        <p>Flere pårørende fortæller, at det er en trøst at vide, de fik sat ord på det, der betød noget, inden de tog afsked med fx et familiemedlem.</p>
+
+        <p>Der kommer ikke et perfekt tidspunkt at tage samtalerne på. Spring derfor ud i det og sæt ord på det, der betyder noget for dig. Vær modig.</p>
+        <p>Tag udgangspunkt i noget konkret, fx en bog du har læst eller i en samtale om nogen, I tidligere har mistet. For nogle er det lettere at starte samtalen om mere praktiske forhold som tanker om begravelse eller arv.</p>
+      </div>
+      <div class="taboo__image">
+        <img src="/img/timglasgraf.png" alt="Grafisk timeglas" />
+      </div>
+    </div>
+  </section>
+</main>
