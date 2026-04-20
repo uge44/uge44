@@ -23,30 +23,13 @@ body {
 }
 
 .line.top {
-  width: 150%;
-  margin-left: 5rem;
+  width: 85%;
+  margin-left: 2rem;
 }
 
 .line.bottom {
-  width: 150%;
-  margin-left: 5rem;
-}
-
-@media (min-width: 900px) {
-  .line.top {
-    width: 89%;
-    margin-left: 5rem;
-  }
-
-  .line.bottom {
-    width: 89%;
-    margin-left: 5rem;
-  }
-  .grid_1-1 {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-  }
+  width: 85%;
+  margin-left: 2rem;
 }
 
 .dropDown {
@@ -82,8 +65,8 @@ button.dropDown {
   border: 2px solid var(--black);
   padding: 0.5rem 1rem;
   margin-left: auto;
-  margin-right: 6rem;
-  margin-bottom: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
   background-color: var(--bg-color);
   border-radius: 15px;
 }
@@ -99,4 +82,23 @@ nav.active ul.filter-buttons {
   margin-left: auto;
   margin-right: 2rem;
   margin-bottom: 1rem;
+}
+@media (min-width: 800px) {
+  .line.top {
+    width: 89%;
+    margin-left: 5rem;
+  }
+
+  .line.bottom {
+    width: 89%;
+    margin-left: 5rem;
+  }
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  button.dropDown {
+    margin-right: 8rem;
+  }
 }

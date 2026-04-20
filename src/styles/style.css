@@ -27,31 +27,61 @@
 
 h2 {
   font-family: "Open Sans", sans-serif;
-  font-size: 70px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  margin: 0 4.8rem;
+  padding: 0 2rem;
 }
 h3 {
   font-family: "Open Sans", sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 400;
 }
 h4 {
   font-family: "Open Sans", sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   font-style: bold;
 }
 h5 {
   font-family: "Open Sans", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-style: bold;
 }
 
 p {
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
+}
+@media (min-width: 800px) {
+  h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 0 4.5rem;
+  }
+  h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  h4 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 28px;
+    font-style: bold;
+  }
+  h5 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+    font-style: bold;
+  }
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+  }
 }
 
 header {
