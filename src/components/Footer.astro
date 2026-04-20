@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import logo from "./img/logo.svg";
+import adresse from "./adress_logo.svg";
+import telefon from "./telefon_logo.svg";
+import mail from "./mail_logo.svg";
+import facebook from "./facebook_logo.svg";
+import insta from "./insta_logo.svg";
+import linkedin from "./linkedin_logo.svg";
+import tiktok from "./tiktok_logo.svg";
+import youtube from "./youtube_logo.svg";
+---
+
+<footer>
+  <div>
+    <Image src={logo} alt="uge 44 logo" class="logo" />
+    <p>Vi skaber fælles rammer hvor man kan forholde sig til døden.</p>
+  </div>
+  <div>
+    <h5>Kontakt os</h5>
+    <div class="grid_footer_kontakt">
+      <Image src={adresse} alt="uge 44 logo" class="logo" />
+      <p></p>
+    </div>
+    <div class="grid_footer_kontakt">
+      <Image src={telefon} alt="uge 44 logo" class="logo" />
+    </div>
+    <div class="grid_footer_kontakt">
+      <Image src={mail} alt="uge 44 logo" class="logo" />
+    </div>
+  </div>
+  <div></div>
+</footer>
