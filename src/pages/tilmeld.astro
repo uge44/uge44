@@ -3,6 +3,7 @@ import Footer from "../components/Footer.astro";
 import TilmeldCard from "../components/TilmeldCard.astro";
 import TilmeldPlakat from "../components/TilmeldPlakat.astro";
 import PageLayout from "../Layouts/PageLayout.astro";
+import Nav from "../components/Nav.astro";
 import "../styles/general.css";
 import "../styles/style.css";
 import livogdoedplakat from "./img/livogdoedplakat.png";
@@ -16,6 +17,7 @@ import Simonvaeth from "./img/SimonVaeth.png";
 
 <TilmeldPlakat
   plakat={livogdoedplakat}
+  phototext="Årets plakat for UGE 44 2025"
   order="1"
   title="I 2025 blev plakaten for UGE 44 skabt af illustrator, animator og billedkunstner Simon Væth."
   caption="Om at lave plakaten forklarer Simon: "
@@ -23,6 +25,7 @@ import Simonvaeth from "./img/SimonVaeth.png";
 />
 <TilmeldPlakat
   plakat={Simonvaeth}
+  phototext="Foto: Peter Helles Eriksen"
   order="-1"
   title="Om Simon"
   text=" I sit virke som illustrator arbejder Simon med et grafisk billedsprog hvor han tolker og fordrejer tekster og temaer til poetiske illustrationer. I hans alsidige arbejde finder man ofte små ledetråde

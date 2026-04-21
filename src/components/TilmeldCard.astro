@@ -13,7 +13,7 @@ import logo from "./img/logo.svg";
       info@livogdoed.dk – så får vi jer på listen!
     </p>
     <p>Hvis I gerne vil være med i kampagnen, men endnu ikke har en idé til hvordan, så skriv til os på info@livogdoed.dk. Her kan I få tilsendt bog-, film-, og musiklister, idéer til mulige arrangementer mm.</p>
-    <button><a href="#">info@livogdoed.dk</a></button>
+    <button class="maillink"><a href="#">info@livogdoed.dk</a></button>
   </div>
   <div>
     <h5>Download logoer og andet materiale til kampagneugen UGE 44 - Fokus på døden.</h5>
@@ -37,30 +37,36 @@ import logo from "./img/logo.svg";
     }
   }
 
-  button {
+  .maillink {
     background-color: var(--bg-color);
     color: var(--black);
-    padding: 1em;
+    padding: 1rem;
     border-radius: 15px;
+    place-content: center;
   }
   .button_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
   .btn_download {
-    padding: 0.4em;
-    width: 180px;
+    padding: 0.3rem;
+    width: 160px;
+    height: 70px;
     background-color: var(--laks);
     display: flex;
     place-items: center;
     justify-content: space-evenly;
+    border-radius: 15px;
   }
   div {
     background-color: var(--laks);
-    margin: 2em 4em;
-    padding: 1em;
+    margin: 2rem 4rem;
+    padding: 1rem;
   }
   .logopic {
     max-width: 80px;
+  }
+  p {
+    margin: 0.5rem;
   }
 </style>
