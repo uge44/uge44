@@ -1,33 +1,69 @@
 ---
 import { Image } from "astro:assets";
 import logo from "./img/logo.svg";
-import adresse from "./adress_logo.svg";
-import telefon from "./telefon_logo.svg";
-import mail from "./mail_logo.svg";
-import facebook from "./facebook_logo.svg";
-import insta from "./insta_logo.svg";
-import linkedin from "./linkedin_logo.svg";
-import tiktok from "./tiktok_logo.svg";
-import youtube from "./youtube_logo.svg";
+import adresse from "./img/adresse_logo.svg";
+import telefon from "./img/telefon_logo.svg";
+import mail from "./img/mail_logo.svg";
+import facebook from "./img/facebook_logo.svg";
+import insta from "./img/insta_logo.svg";
+import linkedin from "./img/linkedin_logo.svg";
+import tiktok from "./img/tiktok_logo.svg";
+import youtube from "./img/youtube_logo.svg";
 ---
 
-<footer>
+<footer class="grid_foot">
   <div>
     <Image src={logo} alt="uge 44 logo" class="logo" />
     <p>Vi skaber fælles rammer hvor man kan forholde sig til døden.</p>
   </div>
   <div>
-    <h5>Kontakt os</h5>
+    <h5>KONTAKT OS</h5>
     <div class="grid_footer_kontakt">
       <Image src={adresse} alt="uge 44 logo" class="logo" />
-      <p></p>
+      <p>Bispebjerg Torv 16 St. TV</p>
     </div>
     <div class="grid_footer_kontakt">
       <Image src={telefon} alt="uge 44 logo" class="logo" />
+      <p>33 36 49 70</p>
     </div>
     <div class="grid_footer_kontakt">
       <Image src={mail} alt="uge 44 logo" class="logo" />
+      <p>info@livogdoed.dk</p>
     </div>
   </div>
-  <div></div>
+  <div class="some">
+    <h5>FIND OS PÅ SOCIALE MEDIER</h5>
+    <div class="test">
+      <Image src={facebook} alt="facebook logo" class="sociallogo" />
+      <Image src={insta} alt="instagram logo" class="sociallogo" />
+      <Image src={linkedin} alt="linkedin logo" class="sociallogo" />
+      <Image src={tiktok} alt="tiktok logo" class="sociallogo" />
+      <Image src={youtube} alt="youtube logo" class="sociallogo" />
+    </div>
+  </div>
 </footer>
+
+<style>
+  .test {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (width>800px) {
+    .grid_foot {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  .grid_footer_kontakt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .grid_foot {
+    margin: 2fr;
+    padding: 2em;
+    gap: 1em;
+  }
+</style>
