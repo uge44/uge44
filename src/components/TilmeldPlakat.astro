@@ -1,11 +1,10 @@
 ---
-import { Image } from "astro:assets";
-const { title, text, plakat, caption, order, phototext } = Astro.props;
+const { title, text, caption, order, phototext } = Astro.props;
 ---
 
 <section class="grid_plakat">
   <div class="phototext">
-    <Image src={plakat} alt="plakat" class="plakat" />
+    <img src="/img/livogdoedplakat.png" alt="plakat" class="plakat" />
     <p>{phototext}</p>
   </div>
   <div class="content">

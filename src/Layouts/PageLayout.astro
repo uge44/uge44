@@ -3,6 +3,7 @@ const { heading } = Astro.props;
 import Nav from "../components/Nav.astro";
 import "../styles/general.css";
 import "../styles/style.css";
+
 //@ts-nocheck
 ---
 
@@ -15,11 +16,13 @@ import "../styles/style.css";
     <meta name="robots" content="noindex,nofollow" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={Astro.props.description} />
-    <title>Astro</title>
+    <title>Uge 44</title>
+    <link rel="icon" type="image/x-icon" href="/img/timeglas.png" />
   </head>
 </html><body>
   <Nav />
   <slot />
+  <main></main>
 </body>
 
 <style></style>
