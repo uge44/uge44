@@ -5,7 +5,7 @@ import logo from "./img/logo.svg";
 
 <section class="grid_2-1_tilmeld">
   <div>
-    <h1>Vil du være med til at sætte fokus på døden i uge 44?</h1>
+    <h2>Vil du være med til at sætte fokus på døden i uge 44?</h2>
 
     <p>Hvis I allerede nu ved, at I har et event i kalenderen, og gerne vil være en del af kampagneugen, så vil vi med glæde inkludere jer i programmet for ugen.</p>
     <p>
@@ -13,7 +13,7 @@ import logo from "./img/logo.svg";
       info@livogdoed.dk – så får vi jer på listen!
     </p>
     <p>Hvis I gerne vil være med i kampagnen, men endnu ikke har en idé til hvordan, så skriv til os på info@livogdoed.dk. Her kan I få tilsendt bog-, film-, og musiklister, idéer til mulige arrangementer mm.</p>
-    <button class="maillink"><a href="#">info@livogdoed.dk</a></button>
+    <button class="mailLink"><a href="#">info@livogdoed.dk</a></button>
   </div>
   <div>
     <h5>Download logoer og andet materiale til kampagneugen UGE 44 - Fokus på døden.</h5>
@@ -29,20 +29,18 @@ import logo from "./img/logo.svg";
 </section>
 
 <style>
-  @media screen and (width>800px) {
-    .grid_2-1_tilmeld {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      margin: 0.3em;
-    }
-  }
-
-  .maillink {
+  .mailLink {
     background-color: var(--bg-color);
-    color: var(--black);
-    padding: 1rem;
+    color: var(--text-color);
     border-radius: 15px;
-    place-content: center;
+    margin-top: 1rem;
+    margin-left: 7rem;
+    border: 2px solid var(--black);
+    padding: 0.5rem 1rem;
+  }
+  .mailLink a {
+    color: var(--text-color);
+    text-decoration: none;
   }
   .button_grid {
     display: grid;
@@ -60,7 +58,7 @@ import logo from "./img/logo.svg";
   }
   div {
     background-color: var(--laks);
-    margin: 2rem 4rem;
+    margin: 2rem 0rem;
     padding: 1rem;
   }
   .logopic {
@@ -68,5 +66,17 @@ import logo from "./img/logo.svg";
   }
   p {
     margin: 0.5rem;
+  }
+  .grid_2-1_tilmeld {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+  @media (min-width: 800px) {
+    .grid_2-1_tilmeld {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      margin: 0.3em;
+    }
   }
 </style>

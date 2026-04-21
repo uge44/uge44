@@ -1,10 +1,10 @@
 ---
+//@ts-nocheck
 import PageLayout from "../Layouts/PageLayout.astro";
 import CardContainer from "../components/CardContainer.astro";
 
 import "../styles/general.css";
 import "../styles/style.css";
-//@ts-nocheck
 
 const response = await fetch("https://dyzjrnptzqhbvdfhvkgi.supabase.co/rest/v1/uge44_kalender", {
   headers: {
@@ -56,6 +56,7 @@ const groupedByCity = events.reduce((acc, event) => {
 }
 
 <script>
+  //@ts-nocheck
   function url_param(key, value) {
     const url = new URL(window.location);
     url.searchParams.set(key, value);

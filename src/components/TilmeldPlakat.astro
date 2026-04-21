@@ -16,17 +16,10 @@ const { title, text, plakat, caption, order, phototext } = Astro.props;
 </section>
 
 <style define:vars={{ order }}>
-  @media screen and (width>800px) {
-    .grid_plakat {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    .content {
-      order: var(--order);
-    }
-  }
   .plakat {
-    max-height: 500px;
+    max-width: 100%;
+    width: 350px;
+    height: auto;
   }
   .content {
     place-content: center;
@@ -36,11 +29,19 @@ const { title, text, plakat, caption, order, phototext } = Astro.props;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.6rem;
-    margin: 5rem;
+    margin: 2rem;
   }
   .phototext {
     place-self: center;
     margin: 0;
-    padding: 2rem;
+  }
+  @media screen and (width>800px) {
+    .grid_plakat {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .content {
+      order: var(--order);
+    }
   }
 </style>
