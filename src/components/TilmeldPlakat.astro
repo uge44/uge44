@@ -1,10 +1,13 @@
 ---
 import { Image } from "astro:assets";
-const { title, text, plakat, caption, order } = Astro.props;
+const { title, text, plakat, caption, order, phototext } = Astro.props;
 ---
 
 <section class="grid_plakat">
-  <Image src={plakat} alt="plakat" class="plakat" />
+  <div class="phototext">
+    <Image src={plakat} alt="plakat" class="plakat" />
+    <p>{phototext}</p>
+  </div>
   <div class="content">
     <h3>{title}</h3>
     <h5>{caption}</h5>
@@ -12,7 +15,7 @@ const { title, text, plakat, caption, order } = Astro.props;
   </div>
 </section>
 
-<style>
+<style define:vars={{ order }}>
   @media screen and (width>800px) {
     .grid_plakat {
       display: grid;
@@ -24,17 +27,20 @@ const { title, text, plakat, caption, order } = Astro.props;
   }
   .plakat {
     max-height: 500px;
-    padding: 3em;
-    place-self: center;
   }
   .content {
-    place-content: center top;
+    place-content: center;
     text-align: left;
-    padding: 1em;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.6em;
-    margin-right: 4em;
+    gap: 0.6rem;
+    margin: 5rem;
+  }
+  .phototext {
+    place-self: center;
+    margin: 0;
+    padding: 2rem;
   }
 </style>
